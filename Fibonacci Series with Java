@@ -1,0 +1,29 @@
+package jv_app;
+
+import java.util.Scanner;
+
+public class JV_APP {
+
+    public static void main(String[] args) {
+        
+        Scanner Input = new Scanner(System.in);
+        
+        System.out.print("Enter the length of fibonacci list : ");
+        int lengthOfList = Input.nextInt();
+        System.out.println("Value that you've entered : " + lengthOfList);
+        
+        // Creating fibonacci list
+        int i = 0 , j = 1 , counter = 1 , temp;
+        while (true){
+            System.out.print(i + ", ");
+            temp = i;
+            i = j;
+            j += temp;
+            counter ++;
+            if(counter > lengthOfList){
+                break;
+            }
+        }
+        System.out.println("\nGolden Ratio (φ) : " + ((double)i / (double)j)); 
+    }
+}
